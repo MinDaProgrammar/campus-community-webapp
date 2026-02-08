@@ -1,0 +1,312 @@
+/* Main layout */
+.community {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
+/* Sidebar styling */
+.community .sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 1rem;
+}
+
+.community .sidebar h2 {
+    margin-bottom: 1rem;
+}
+
+.community .group-list {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+.community .group-list li {
+    padding: 0.5rem 0;
+}
+
+/* Community posts container */
+.community .posts {
+    flex: 1; /* takes remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Existing post styling remains unchanged */
+.community-post {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.community-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Title input */
+.community-form input#title {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    width: calc(100%-40px);
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #ccc; /* light gray underline */
+    padding: 5px 0;
+    margin: 20px 20px 10px;
+    font-weight: bold;
+}
+
+/* Placeholder box */
+.community-form .image-upload {
+    min-height: 120px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.community-form .image-upload .placeholder-text {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Description textarea */
+.community-form textarea#description {
+    width: calc(100%-40px);
+    border: none;
+    outline: none;
+    background: none;
+    resize: vertical; /* allow vertical resize */
+    min-height: 100px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 10px 20px 20px;
+    border-bottom: 1px solid #ccc; /* optional underline */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Focus effect */
+.community-form input:focus,
+.community-form textarea:focus {
+    border-bottom: 1px solid #007bff; /* highlight on focus */
+}
+
+.community .community-group-btn {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: 0.25rem 0;
+    background: none;
+    border: none;
+    color: #ffffff;       /* white text */
+    cursor: pointer;
+    text-align: left;
+    font-weight: normal;   /* normal by default */
+    font-size: 1rem;
+    transition: font-weight 0.2s;
+}
+
+/* Active button - bold text */
+.community .community-group-btn.active {
+    font-weight: bold;
+}
+
+/* Style for images in community posts */
+.post-image {
+    display: block;
+    padding: 0 20px 10px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* buildathon/src/main/webapp/css/community.css */
+
+/* Hide the default browser button */
+.image-upload input[type="file"] {
+    display: none;
+}
+
+/* Ensure the label looks like a clickable box */
+.community-form .image-upload {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc; /* Makes it look more like an upload zone */
+    transition: border-color 0.3s;
+}
+
+.community-form .image-upload:hover {
+    border-color: #007bff; /* Highlight when hovering */
+}
+
+/* Comment Section Container */
+.comments-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 12px 12px; /* Round only bottom corners to match post */
+}
+
+.comments-title {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+/* Chat Bubble Style */
+.comment-bubble {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    max-width: 90%;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #007bff;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.comment-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Modern Input Field */
+.comment-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.comment-field {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Pill shape */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.comment-field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.comment-send-btn {
+    background-color: #040a67; /* Matching your post button color */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.comment-send-btn:hover {
+    opacity: 0.8;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.post-user {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.post-date {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 2px;
+}
+
+.post-date .time {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: end;
+}
+
+.post-date .date {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: end;
+}
+
+.community-post h2 {
+    color: #2c3e50;
+    margin: 20px 20px 10px;
+    font-size: 1.3rem;
+}
+
+.post-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0 20px 20px;
+}
+
+.submit-btn {
+    display: flex;
+    align-self: flex-end;
+    margin: 0 20px 20px; 
+    padding: 8px 15px; 
+    background-color: 
+    #040a67; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.image-preview {
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    display: none;
+    margin: 0 auto;
+}

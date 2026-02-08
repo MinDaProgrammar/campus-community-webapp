@@ -1,0 +1,21 @@
+# Maven (Compiled code)
+target/
+*.war
+*.ear
+*.nar
+*.jar
+*.class
+
+# IDE Settings (VS Code, Eclipse, IntelliJ)
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.DS_Store
+
+# Logs
+*.log
+# Uploaded images at runtime
+uploads/
