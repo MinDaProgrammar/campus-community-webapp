@@ -1,6 +1,6 @@
-# Campus Community Web App — 48H Buildathon (Java Servlets, JSP, MySQL)
+# Campus Community Web App — Supernova Buildathon (Java Servlets, JSP, MySQL)
 
-A student community platform for the Department of Advanced Computing Sciences, built by a team of five in 48 hours at the **48H Buildathon** (Maastricht University, February 2026).
+A student community platform for the Department of Advanced Computing Sciences, built by a team of five in 48 hours at the **Supernova Buildathon** (Maastricht University, February 2026).
 
 ## Features
 
